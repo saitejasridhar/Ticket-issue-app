@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Ticket issue app</string>
+
+    <string name="resendotp"><u>Resend OTP</u></string>
+
+    <string name="already">ALREADY HAVE AN ACCOUNT? <u>LOG IN</u></string>
+    <string name="dont">DON\'T HAVE AN ACCOUNT? <u>SIGN IN</u></string>
+</resources>

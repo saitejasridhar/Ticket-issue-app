@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "503820182887",
+    "firebase_url": "https://ticket-issue-app-48d42.firebaseio.com",
+    "project_id": "ticket-issue-app-48d42",
+    "storage_bucket": "ticket-issue-app-48d42.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:503820182887:android:6da57989e7599119ecbbc2",
+        "android_client_info": {
+          "package_name": "com.example.ticketissueapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "503820182887-9vsqu4qns8ia0k7m8omsmjf7qgdmgcps.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ticketissueapp",
+            "certificate_hash": "d3bed3269d8df21f79227bbe776beff292ffb5ec"
+          }
+        },
+        {
+          "client_id": "503820182887-gcqas9jg1k6r6mhv07e7psvjpg8lq634.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBQwWOAdavaByU8T8ktiWBUmz6LKaiJio"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "503820182887-gcqas9jg1k6r6mhv07e7psvjpg8lq634.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
