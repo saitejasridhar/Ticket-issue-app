@@ -61,14 +61,7 @@ public class Signup extends AppCompatActivity {
 
                 if(!uname.getText().toString().isEmpty() && !email.getText().toString().isEmpty() && !phoneno.getText().toString().isEmpty() ){
 
-
-
-
-
-
-
-
-                               final String n = uname.getText().toString();
+           final String n = uname.getText().toString();
                                final String e = email.getText().toString();
                                final String p = phoneno.getText().toString();
                   final   String finalphone = "+91" + p;
@@ -86,7 +79,7 @@ public class Signup extends AppCompatActivity {
                                {
 
                                    openNewActivitys(Verifyphonedata.class, finalphone, n, e);
-//                                   finish();
+
                                }
                                else{
                           Toast.makeText(getApplicationContext(),"User exists",Toast.LENGTH_SHORT).show();
@@ -101,12 +94,6 @@ public class Signup extends AppCompatActivity {
                    }
 
                     });
-
-
-
-//                           }
-//                       }
-//                   });
 
 
                 }

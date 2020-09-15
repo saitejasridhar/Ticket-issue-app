@@ -14,7 +14,6 @@ public class MainActivity extends AppCompatActivity {
 
     FirebaseAuth mAuth = FirebaseAuth.getInstance();
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +21,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Button login_button = (Button) findViewById(R.id.login);
         Button signup_button=(Button) findViewById(R.id.signup);
+        FirebaseAuth auth = FirebaseAuth.getInstance();
+        if (auth.getCurrentUser() != null) {
+            openNewActivity(home.class);
+        }
         signup_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -40,15 +43,4 @@ public class MainActivity extends AppCompatActivity {
     {
         startActivity(new Intent(getBaseContext(), ActivityToOpen));
     }
-
-//    @Override
-//    protected void onStart() {
-//        super.onStart();
-//        if(mAuth.getCurrentUser()!=null)
-//        {
-//            startActivity(new Intent(getApplicationContext(),home.class));
-//        }
-//
-//    }
-
 }

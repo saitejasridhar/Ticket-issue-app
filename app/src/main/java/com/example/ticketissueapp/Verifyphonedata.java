@@ -87,7 +87,7 @@ public class Verifyphonedata extends AppCompatActivity {
                                    public void onComplete(@NonNull Task<Void> task) {
                                       if(task.isSuccessful()){
                                           openNewActivity(home.class);
-
+                                          finishAffinity();
                                       }
                                        else {
                                           Toast.makeText(getApplicationContext(),"Data is not inserted",Toast.LENGTH_SHORT).show();
@@ -141,15 +141,14 @@ public class Verifyphonedata extends AppCompatActivity {
         startActivity(new Intent(getBaseContext(), ActivityToOpen));
     }
 
-
     public void perform_action(View view) {
         Intent intent = getIntent();
         String phonenumber = intent.getExtras().getString("fphon");
 
         PhoneAuthProvider.getInstance().verifyPhoneNumber(
                 phonenumber,
-                1  ,               // Timeout duration
-                TimeUnit.MINUTES,   // Unit of timeout
+                1  ,
+                TimeUnit.MINUTES,
                 this,
                 new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
                     @Override

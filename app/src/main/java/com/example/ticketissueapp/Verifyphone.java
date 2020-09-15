@@ -69,7 +69,7 @@ public class Verifyphone extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     openNewActivity(home.class);
-
+                    finishAffinity();
                     Toast.makeText(Verifyphone.this,"Authentication sucessful",Toast.LENGTH_SHORT).show();
                 }
                 else{
@@ -124,8 +124,8 @@ public class Verifyphone extends AppCompatActivity {
 
         PhoneAuthProvider.getInstance().verifyPhoneNumber(
                 phonenumber,
-                1  ,               // Timeout duration
-                TimeUnit.MINUTES,   // Unit of timeout
+                1  ,
+                TimeUnit.MINUTES,
                 this,
                 new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
                     @Override
