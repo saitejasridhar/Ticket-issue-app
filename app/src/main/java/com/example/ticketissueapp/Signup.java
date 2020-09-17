@@ -47,7 +47,6 @@ public class Signup extends AppCompatActivity {
         final EditText email=(EditText) findViewById(R.id.email);
         firebaseAuth=FirebaseAuth.getInstance();
         fstore=FirebaseFirestore.getInstance();
-//        userid=firebaseAuth.getCurrentUser().getUid();
         final CollectionReference ref = fstore.collection("users");
 
 

@@ -5,4 +5,7 @@
 
     <string name="already">ALREADY HAVE AN ACCOUNT? <u>LOG IN</u></string>
     <string name="dont">DON\'T HAVE AN ACCOUNT? <u>SIGN IN</u></string>
+    <string name="pick_images">Pick Image(s)</string>
+    <string name="upload_images">Upload Image(s)</string>
+    <string name="sample_image_name">Sample Image Name</string>
 </resources>
