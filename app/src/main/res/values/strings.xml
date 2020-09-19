@@ -8,4 +8,8 @@
     <string name="pick_images">Pick Image(s)</string>
     <string name="upload_images">Upload Image(s)</string>
     <string name="sample_image_name">Sample Image Name</string>
+
+    <string name="name">Name:</string>
+    <string name="email">Email:</string>
+    <string name="check">Check Details</string>
 </resources>
