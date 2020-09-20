@@ -7,8 +7,9 @@
     android:layout_height="wrap_content"
     android:weightSum="2"
     android:layout_margin="10dp"
-    android:background="#FCEFF6"
+    android:background="@drawable/item_roundcorner"
     android:orientation="horizontal"
+
    android:elevation="10dp">
 
     <LinearLayout
