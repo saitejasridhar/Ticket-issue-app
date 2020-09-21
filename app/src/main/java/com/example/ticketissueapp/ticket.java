@@ -3,49 +3,53 @@ package com.example.ticketissueapp;
 import com.google.type.Date;
 
 public class ticket {
-    private String issue;
-    private Date time;
-    private String address;
+    private String tissue;
+    private String ttime;
+    private String taddress;
+    private String tissue_desc;
 
-    public String getIssue() {
-        return issue;
+    public String getTissue() {
+        return tissue;
     }
 
-    public void setIssue(String issue) {
-        this.issue = issue;
+    public void setTissue(String tissue) {
+        this.tissue = tissue;
     }
 
-    public Date getTime() {
-        return time;
+    public String getTtime() {
+        return ttime;
     }
 
-    public void setTime(Date time) {
-        this.time = time;
+    public void setTtime(String ttime) {
+        this.ttime = ttime;
     }
 
-    public String getAddress() {
-        return address;
+    public String getTaddress() {
+        return taddress;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setTaddress(String taddress) {
+        this.taddress = taddress;
     }
 
-    public String getIssue_desc() {
-        return issue_desc;
+    public String getTissue_desc() {
+        return tissue_desc;
     }
 
-    public void setIssue_desc(String issue_desc) {
-        this.issue_desc = issue_desc;
+    public void setTissue_desc(String tissue_desc) {
+        this.tissue_desc = tissue_desc;
     }
 
-    private String issue_desc;
+
+
+
+
 
     ticket(){}
-    ticket(String issue,Date time,String address,String issue_desc){
-        this.issue=issue;
-        this.time=time;
-        this.address=address;
-        this.issue_desc=issue_desc;
+    ticket(String tissue,String ttime,String taddress,String tissue_desc){
+        this.tissue=tissue;
+        this.ttime=ttime;
+        this.taddress=taddress;
+        this.tissue_desc=tissue_desc;
     }
 }

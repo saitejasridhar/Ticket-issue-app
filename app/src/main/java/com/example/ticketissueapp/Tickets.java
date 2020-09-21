@@ -46,6 +46,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -58,6 +59,8 @@ import android.widget.Spinner;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.Arrays;
+import java.util.Calendar;
+
 
 public class Tickets extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
@@ -75,6 +78,7 @@ public class Tickets extends AppCompatActivity {
     CollectionReference reference;
     int counter;
     FirebaseAuth firebaseAuth;
+
 
 
     @Override
@@ -226,13 +230,15 @@ public class Tickets extends AppCompatActivity {
         for (int i = 0; i < savedImagesUri.size(); i++) {
             dataMap.put("image" + i, savedImagesUri.get(i));
         }
+        String t = Calendar.getInstance().getTime().toString();
+
         dataMap.put("name", na);
         dataMap.put("phone", ph);
         dataMap.put("email", em);
-        dataMap.put("address", ad);
-        dataMap.put("issue", isu);
-        dataMap.put("issue_desc", is);
-        dataMap.put("time",com.google.firebase.firestore.FieldValue.serverTimestamp());
+        dataMap.put("taddress", ad);
+        dataMap.put("tissue", isu);
+        dataMap.put("tissue_desc", is);
+        dataMap.put("ttime",t);
 
 
         reference.add(dataMap).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
