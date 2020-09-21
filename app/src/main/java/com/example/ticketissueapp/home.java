@@ -48,7 +48,7 @@ public class home extends AppCompatActivity {
         ActionBar actionBar=getSupportActionBar();
         if(actionBar!=null)
         {
-         actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.gradient2));
+            actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.gradient2));
         }
 
 
