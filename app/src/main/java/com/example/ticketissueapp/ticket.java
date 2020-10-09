@@ -8,6 +8,16 @@ public class ticket {
     private String taddress;
     private String tissue_desc;
 
+    public String getUserid() {
+        return userid;
+    }
+
+    public void setUserid(String userid) {
+        this.userid = userid;
+    }
+
+    private String userid;
+
     public String getTissue() {
         return tissue;
     }
@@ -42,14 +52,12 @@ public class ticket {
 
 
 
-
-
-
     ticket(){}
-    ticket(String tissue,String ttime,String taddress,String tissue_desc){
+    ticket(String tissue,String ttime,String taddress,String tissue_desc,String userid){
         this.tissue=tissue;
         this.ttime=ttime;
         this.taddress=taddress;
         this.tissue_desc=tissue_desc;
+        this.userid=userid;
     }
 }

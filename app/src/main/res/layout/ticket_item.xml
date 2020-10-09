@@ -3,9 +3,11 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:weightSum="2"
-    android:layout_margin="10dp"
     android:background="@drawable/item_roundcorner"
     android:orientation="horizontal"
+    android:id="@+id/rootView1"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
 
     android:elevation="10dp">
 
@@ -13,20 +15,17 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
+        android:id="@+id/rootView2"
         android:orientation="vertical">
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
 
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+
+
 
                 <TextView
+                    android:layout_marginLeft="10dp"
                     android:id="@+id/tname"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -36,6 +35,8 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/rootView3"
                     android:orientation="horizontal">
 
                     <TextView
@@ -47,17 +48,12 @@
 
                     <TextView
                         android:id="@+id/taddress"
-                        android:layout_width="wrap_content"
+                        android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:textSize="11dp" />
 
                 </LinearLayout>
 
-
-            </LinearLayout>
-
-
-        </LinearLayout>
 
 
         <TextView
@@ -66,6 +62,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:scaleType="fitXY" />
+
 
     </LinearLayout>
 

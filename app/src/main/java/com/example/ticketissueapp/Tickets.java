@@ -45,10 +45,12 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 import com.example.ticketissueapp.Helpers.CoreHelper;
@@ -104,7 +106,7 @@ public class Tickets extends AppCompatActivity {
 
         firebaseAuth = FirebaseAuth.getInstance();
 
-        String userid = firebaseAuth.getCurrentUser().getUid();
+
 
 
         firestore = FirebaseFirestore.getInstance();
@@ -113,7 +115,7 @@ public class Tickets extends AppCompatActivity {
 
 
         storage = FirebaseStorage.getInstance();
-        reference = firestore.collection("users").document(userid).collection("tickets");
+        reference = firestore.collection("tickets");
 
         savedImagesUri = new ArrayList<>();
 
@@ -157,7 +159,7 @@ public class Tickets extends AppCompatActivity {
                         openNewActivity(home.class);
                         break;
                     case R.id.profile:
-                        openNewActivity(Profile.class);
+                        openNewActivity(Tab.class);
                         break;
                 }
                 return  true;
@@ -211,6 +213,7 @@ public class Tickets extends AppCompatActivity {
     }
 
     private void saveImageDataToFirestore(final ProgressDialog progressDialog) {
+        String useri = firebaseAuth.getCurrentUser().getUid();
         final EditText n = (EditText) findViewById(R.id.editTextTextPersonName3);
         final EditText p = (EditText) findViewById(R.id.editTextPhone2);
         final EditText e = (EditText) findViewById(R.id.editTextTextEmailAddress2);
@@ -230,7 +233,9 @@ public class Tickets extends AppCompatActivity {
         for (int i = 0; i < savedImagesUri.size(); i++) {
             dataMap.put("image" + i, savedImagesUri.get(i));
         }
-        String t = Calendar.getInstance().getTime().toString();
+        Date c = Calendar.getInstance().getTime();
+        SimpleDateFormat df = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault());
+        String t = df.format(c);
 
         dataMap.put("name", na);
         dataMap.put("phone", ph);
@@ -239,6 +244,7 @@ public class Tickets extends AppCompatActivity {
         dataMap.put("tissue", isu);
         dataMap.put("tissue_desc", is);
         dataMap.put("ttime",t);
+        dataMap.put("userid",useri);
 
 
         reference.add(dataMap).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {

@@ -40,7 +40,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         holder.name.setText(profiles.get(position).getName());
         holder.address.setText(profiles.get(position).getAddress());
         holder.time.setText(profiles.get(position).getTime()+".");
-        Picasso.get().load(profiles.get(position).getDp()).into(holder.dp);
         Picasso.get().load(profiles.get(position).getProfilePic()).into(holder.profilePic);
         if(profiles.get(position).isPermission()) {
             holder.btn.setVisibility(View.VISIBLE);
@@ -64,8 +63,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             address = (TextView) itemView.findViewById(R.id.address);
             profilePic = (ImageView) itemView.findViewById(R.id.profilePic);
             time=(TextView) itemView.findViewById(R.id.time);
-            dp=(ImageView) itemView.findViewById(R.id.dpimage);
-            btn = (Button) itemView.findViewById(R.id.checkDetails);
+
         }
         public void onClick(final int position)
         {

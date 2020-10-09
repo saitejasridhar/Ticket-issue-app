@@ -79,7 +79,7 @@ public class Editprofile extends AppCompatActivity {
                         openNewActivity(Tickets.class);
                         break;
                     case R.id.profile:
-                        openNewActivity(Profile.class);
+                        openNewActivity(Tab.class);
                         break;
                 }
                 return  true;
