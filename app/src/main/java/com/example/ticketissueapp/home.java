@@ -69,15 +69,7 @@ public class home extends AppCompatActivity {
             }
         });
 
-        Button logout_button = (Button) findViewById(R.id.logout);
-        logout_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                auth.signOut();
-                finish();
-                openNewActivity(MainActivity.class);
-            }
-        });
+
 
         recyclerView = (RecyclerView) findViewById(R.id.myRecycler);
         recyclerView.setLayoutManager( new LinearLayoutManager(this));

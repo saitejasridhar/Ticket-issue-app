@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#fff"
     tools:context=".Tab">
 
 
@@ -12,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay"
-        android:background="@drawable/gradient">
+        android:background="@color/orange">
 
       <LinearLayout
           android:layout_width="wrap_content"
@@ -40,22 +41,22 @@
 
               <Button
                   android:id="@+id/editprofile"
-                  android:layout_width="37dp"
-                  android:layout_height="39dp"
+                  android:layout_width="27dp"
+                  android:layout_height="29dp"
                   android:layout_alignParentRight="true"
                   android:layout_marginTop="10dp"
                   android:layout_marginRight="28dp"
-                  android:background="@drawable/ic_edit" />
+                  android:background="@drawable/ic_editpro" />
 
 
               <Button
                   android:id="@+id/logout"
-                  android:layout_width="37dp"
-                  android:layout_height="39dp"
+                  android:layout_width="27dp"
+                  android:layout_height="29dp"
                   android:layout_alignParentRight="true"
                   android:layout_marginTop="10dp"
                   android:layout_marginRight="80dp"
-                  android:background="@drawable/logout" />
+                  android:background="@drawable/ic_logout" />
 
           </RelativeLayout>
 
@@ -70,7 +71,7 @@
             android:id="@+id/tabs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#ae64c6" />
+            android:background="@color/orange" />
 
 
 
@@ -84,6 +85,9 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/navbar"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

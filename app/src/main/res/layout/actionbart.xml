@@ -11,6 +11,7 @@
         android:layout_gravity="center"
         android:id="@+id/action_bar_title"
         android:text="Raise New Ticket "
-        android:textColor="#7C69EF"
+        android:textColor="#fff"
+        android:background="#255f85"
         android:textSize="20sp" />
 </LinearLayout>

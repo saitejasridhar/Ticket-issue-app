@@ -20,6 +20,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.ticketissueapp.ui.main.SectionsPagerAdapter;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class Tab extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
@@ -27,6 +28,7 @@ public class Tab extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        final FirebaseAuth auth = FirebaseAuth.getInstance();
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tab);
@@ -46,7 +48,15 @@ public class Tab extends AppCompatActivity {
 
 
 
-
+        Button logout_button = (Button) findViewById(R.id.logout);
+        logout_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                auth.signOut();
+                finish();
+                openNewActivity(MainActivity.class);
+            }
+        });
 
         bottomNavigationView=(BottomNavigationView) findViewById(R.id.navbar);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
