@@ -43,4 +43,9 @@ public class MainActivity extends AppCompatActivity {
     {
         startActivity(new Intent(getBaseContext(), ActivityToOpen));
     }
+
+    @Override
+    public void onBackPressed() {
+        moveTaskToBack(true);
+    }
 }

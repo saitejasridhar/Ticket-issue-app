@@ -107,12 +107,7 @@ public class Tickets extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
 
 
-
-
         firestore = FirebaseFirestore.getInstance();
-
-
-
 
         storage = FirebaseStorage.getInstance();
         reference = firestore.collection("tickets");
@@ -141,6 +136,7 @@ public class Tickets extends AppCompatActivity {
             public void onClick(View view) {
                 if (!n.getText().toString().isEmpty() && !p.getText().toString().isEmpty() && !e.getText().toString().isEmpty() && !a.getText().toString().isEmpty() && !i.getText().toString().isEmpty()) {
                     uploadImages(view);
+
                 } else {
                     Toast.makeText(Tickets.this, "All fields are required", Toast.LENGTH_SHORT).show();
 

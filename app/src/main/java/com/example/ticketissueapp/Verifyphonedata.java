@@ -29,7 +29,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
-public class Verifyphonedata extends AppCompatActivity {
+public class
+Verifyphonedata extends AppCompatActivity {
     String verificationId;
     PhoneAuthProvider.ForceResendingToken token;
     Boolean vip=false;
